@@ -57,7 +57,7 @@
     <tr>
     <td>{{ $mhs ->nim }}</td>
         <td>{{ $mhs ->nama }}</td>
-        <td>{{ $mhs ->kelas }}</td>
+        <td>{{ $mhs ->Kelas -> nama_kelas}}</td>
         <td>{{ $mhs ->jurusan }}</td>
         <td>{{ $mhs ->alamat }}</td> 
         <td>{{ $mhs ->email }}</td> 
