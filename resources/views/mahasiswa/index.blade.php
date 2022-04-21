@@ -47,22 +47,24 @@
         <th>Nama</th>
         <th>Kelas</th>
         <th>Jurusan</th>
-        <th>Alamat</th>
+        <!-- <th>Alamat</th>
         <th>Email</th>
         <th>TanggalLahir</th>
-        <th>JenisKelamin</th>
-        <th width="280x">Action</th>
+        <th>JenisKelamin</th> -->
+        <th>Foto</th>
+        <th width="300px">Action</th>
     </tr>
     @foreach ($paginate as $mhs)
     <tr>
     <td>{{ $mhs ->nim }}</td>
         <td>{{ $mhs ->nama }}</td>
-        <td>{{ $mhs ->Kelas -> nama_kelas}}</td>
+        <td>{{ $mhs ->kelas -> nama_kelas}}</td>
         <td>{{ $mhs ->jurusan }}</td>
-        <td>{{ $mhs ->alamat }}</td> 
+        <!-- <td>{{ $mhs ->alamat }}</td> 
         <td>{{ $mhs ->email }}</td> 
         <td>{{ $mhs ->tanggal_lahir }}</td> 
-        <td>{{ $mhs ->jenis_kelamin }}</td> 
+        <td>{{ $mhs ->jenis_kelamin }}</td>  -->
+        <td><img style="width: 50px; height: 50px; overflow: hidden" src="{{asset('storage/'.$mhs->foto)}}"></td>
         <td>
         <form action="{{ route('mahasiswa.destroy',['mahasiswa'=>$mhs->nim]) }}" method="POST">
             <a class="btn btn-info" href="{{ route('mahasiswa.show',$mhs->nim) }}">Show</a>

@@ -11,7 +11,7 @@ use App\Models\Mahasiswa;
 
 class Mahasiswa extends Model //Definisi Model
 {
-    protected $table='mahasiswa'; // Eloquent akan membuat model mahasiswa menyimpan record di tabel mahasiswa
+    protected $table= 'mahasiswa'; // Eloquent akan membuat model mahasiswa menyimpan record di tabel mahasiswa
     protected $primaryKey = 'Nim'; // Memanggil isi DB Dengan primarykey
     /**
     * The attributes that are mass assignable.
@@ -27,6 +27,7 @@ class Mahasiswa extends Model //Definisi Model
         'Email',
         'Tanggal_Lahir',
         'Jenis_Kelamin',
+        'Foto',
     ];
 
     public function kelas(){
